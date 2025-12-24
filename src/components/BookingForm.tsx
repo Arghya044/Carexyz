@@ -95,7 +95,7 @@ export default function BookingForm({ service }: { service: Service }) {
                             min="1"
                             value={duration}
                             onChange={(e) => setDuration(Number(e.target.value))}
-                            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-gray-900 focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm"
+                            className="mt-1 block w-full border border-gray-300 dark:border-gray-600 rounded-md shadow-sm py-2 px-3 text-gray-900 dark:text-white bg-white dark:bg-gray-700 focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm"
                         />
                     </div>
 
@@ -107,7 +107,7 @@ export default function BookingForm({ service }: { service: Service }) {
                                 required
                                 value={location.division}
                                 onChange={(e) => setLocation({ ...location, division: e.target.value })}
-                                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-gray-900 focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm"
+                                className="mt-1 block w-full border border-gray-300 dark:border-gray-600 rounded-md shadow-sm py-2 px-3 text-white dark:text-white bg-white dark:bg-gray-700 focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm"
                             />
                         </div>
                         <div>
@@ -117,7 +117,7 @@ export default function BookingForm({ service }: { service: Service }) {
                                 required
                                 value={location.district}
                                 onChange={(e) => setLocation({ ...location, district: e.target.value })}
-                                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-gray-900 focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm"
+                                className="mt-1 block w-full border border-gray-300 dark:border-gray-600 rounded-md shadow-sm py-2 px-3 text-white dark:text-white bg-white dark:bg-gray-700 focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm"
                             />
                         </div>
                         <div>
@@ -127,7 +127,7 @@ export default function BookingForm({ service }: { service: Service }) {
                                 required
                                 value={location.city}
                                 onChange={(e) => setLocation({ ...location, city: e.target.value })}
-                                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-gray-900 focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm"
+                                className="mt-1 block w-full border border-gray-300 dark:border-gray-600 rounded-md shadow-sm py-2 px-3 text-white dark:text-white bg-white dark:bg-gray-700 focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm"
                             />
                         </div>
                         <div>
@@ -137,7 +137,7 @@ export default function BookingForm({ service }: { service: Service }) {
                                 required
                                 value={location.area}
                                 onChange={(e) => setLocation({ ...location, area: e.target.value })}
-                                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-gray-900 focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm"
+                                className="mt-1 block w-full border border-gray-300 dark:border-gray-600 rounded-md shadow-sm py-2 px-3 text-white dark:text-white bg-white dark:bg-gray-700 focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm"
                             />
                         </div>
                     </div>
@@ -149,7 +149,7 @@ export default function BookingForm({ service }: { service: Service }) {
                             rows={3}
                             value={location.address}
                             onChange={(e) => setLocation({ ...location, address: e.target.value })}
-                            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-gray-900 focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm"
+                            className="mt-1 block w-full border border-gray-300 dark:border-gray-600 rounded-md shadow-sm py-2 px-3 text-white dark:text-white bg-white dark:bg-gray-700 focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm"
                         />
                     </div>
 
