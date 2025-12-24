@@ -36,12 +36,12 @@ export default async function Home() {
     return (
         <div className="bg-white dark:bg-gray-900">
             {/* Hero Section */}
-            <div className="relative bg-indigo-600">
+            <div className="relative bg-rose-600">
                 <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
                         Trusted Care for Your Loved Ones
                     </h1>
-                    <p className="mt-6 max-w-2xl mx-auto text-xl text-indigo-100">
+                    <p className="mt-6 max-w-2xl mx-auto text-xl text-rose-100">
                         Professional babysitting, elderly care, and specialized medical support at your doorstep.
                     </p>
                 </div>
@@ -68,7 +68,7 @@ export default async function Home() {
                                 </h3>
                                 <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{service.category}</p>
                                 <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 line-clamp-2">{service.description}</p>
-                                <p className="mt-4 text-lg font-bold text-indigo-600">${service.chargePerHour} <span className="text-sm font-normal text-gray-500">/ hour</span></p>
+                                <p className="mt-4 text-lg font-bold text-rose-600">${service.chargePerHour} <span className="text-sm font-normal text-gray-500">/ hour</span></p>
                             </div>
                         </div>
                     ))}

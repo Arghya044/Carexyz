@@ -112,7 +112,7 @@ export default function AdminDashboard() {
                 <nav className="-mb-px flex space-x-8">
                     <button
                         onClick={() => setActiveTab('bookings')}
-                        className={`${activeTab === 'bookings' ? 'border-indigo-500 text-indigo-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'} whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm`}
+                        className={`${activeTab === 'bookings' ? 'border-rose-500 text-rose-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'} whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm`}
                     >
                         Bookings
                     </button>
@@ -145,8 +145,8 @@ export default function AdminDashboard() {
                                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">${booking.totalCost}</td>
                                     <td className="px-6 py-4 whitespace-nowrap text-sm">
                                         <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${booking.status === 'Confirmed' ? 'bg-green-100 text-green-800' :
-                                                booking.status === 'Pending' ? 'bg-yellow-100 text-yellow-800' :
-                                                    'bg-gray-100 text-gray-800'
+                                            booking.status === 'Pending' ? 'bg-yellow-100 text-yellow-800' :
+                                                'bg-gray-100 text-gray-800'
                                             }`}>
                                             {booking.status}
                                         </span>
@@ -155,7 +155,7 @@ export default function AdminDashboard() {
                                         <select
                                             value={booking.status}
                                             onChange={(e) => handleStatusUpdate(booking._id, e.target.value)}
-                                            className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white dark:bg-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                            className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-md shadow-sm focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm"
                                         >
                                             <option value="Pending">Pending</option>
                                             <option value="Confirmed">Confirm</option>
@@ -173,7 +173,7 @@ export default function AdminDashboard() {
                     <div className="mb-4">
                         <button
                             onClick={() => setShowServiceForm(!showServiceForm)}
-                            className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700"
+                            className="bg-rose-600 text-white px-4 py-2 rounded-md hover:bg-rose-700"
                         >
                             {showServiceForm ? 'Cancel' : 'Add New Service'}
                         </button>
@@ -181,16 +181,16 @@ export default function AdminDashboard() {
 
                     {showServiceForm && (
                         <form onSubmit={handleServiceSubmit} className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-6 space-y-4">
-                            <input required className="w-full p-2 border rounded" placeholder="Title" value={serviceData.title} onChange={e => setServiceData({ ...serviceData, title: e.target.value })} />
-                            <textarea required className="w-full p-2 border rounded" placeholder="Description" value={serviceData.description} onChange={e => setServiceData({ ...serviceData, description: e.target.value })} />
-                            <select className="w-full p-2 border rounded" value={serviceData.category} onChange={e => setServiceData({ ...serviceData, category: e.target.value })}>
+                            <input required className="w-full p-2 border rounded text-gray-900" placeholder="Title" value={serviceData.title} onChange={e => setServiceData({ ...serviceData, title: e.target.value })} />
+                            <textarea required className="w-full p-2 border rounded text-gray-900" placeholder="Description" value={serviceData.description} onChange={e => setServiceData({ ...serviceData, description: e.target.value })} />
+                            <select className="w-full p-2 border rounded text-gray-900" value={serviceData.category} onChange={e => setServiceData({ ...serviceData, category: e.target.value })}>
                                 <option value="Baby Care">Baby Care</option>
                                 <option value="Elderly Care">Elderly Care</option>
                                 <option value="Sick People Care">Sick People Care</option>
                             </select>
-                            <input required type="number" className="w-full p-2 border rounded" placeholder="Charge Per Hour" value={serviceData.chargePerHour} onChange={e => setServiceData({ ...serviceData, chargePerHour: e.target.value })} />
-                            <input className="w-full p-2 border rounded" placeholder="Image URL" value={serviceData.imageUrl} onChange={e => setServiceData({ ...serviceData, imageUrl: e.target.value })} />
-                            <input className="w-full p-2 border rounded" placeholder="Features (comma separated)" value={serviceData.features} onChange={e => setServiceData({ ...serviceData, features: e.target.value })} />
+                            <input required type="number" className="w-full p-2 border rounded text-gray-900" placeholder="Charge Per Hour" value={serviceData.chargePerHour} onChange={e => setServiceData({ ...serviceData, chargePerHour: e.target.value })} />
+                            <input className="w-full p-2 border rounded text-gray-900" placeholder="Image URL" value={serviceData.imageUrl} onChange={e => setServiceData({ ...serviceData, imageUrl: e.target.value })} />
+                            <input className="w-full p-2 border rounded text-gray-900" placeholder="Features (comma separated)" value={serviceData.features} onChange={e => setServiceData({ ...serviceData, features: e.target.value })} />
                             <button type="submit" className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Save Service</button>
                         </form>
                     )}
@@ -201,7 +201,7 @@ export default function AdminDashboard() {
                                 <button onClick={() => handleDeleteService(service._id)} className="absolute top-2 right-2 text-red-500 hover:text-red-700">Delete</button>
                                 <h3 className="font-bold">{service.title}</h3>
                                 <p className="text-sm text-gray-500">{service.category}</p>
-                                <p className="text-indigo-600 font-bold">${service.chargePerHour}/hr</p>
+                                <p className="text-rose-600 font-bold">${service.chargePerHour}/hr</p>
                             </div>
                         ))}
                     </div>

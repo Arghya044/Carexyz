@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { AuthProvider } from "@/context/AuthContext";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
@@ -16,12 +17,13 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className="antialiased bg-gray-50 dark:bg-gray-900">
+            <body className="antialiased bg-gray-50 dark:bg-gray-900 flex flex-col min-h-screen">
                 <AuthProvider>
                     <Navbar />
-                    <main className="min-h-[calc(100vh-4rem)]">
+                    <main className="flex-grow">
                         {children}
                     </main>
+                    <Footer />
                     <Toaster position="top-center" />
                 </AuthProvider>
             </body>

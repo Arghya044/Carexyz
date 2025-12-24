@@ -21,18 +21,18 @@ export default function Navbar() {
                 <div className="flex justify-between h-16">
                     <div className="flex">
                         <Link href="/" className="flex-shrink-0 flex items-center">
-                            <span className="text-xl font-bold text-indigo-600 dark:text-indigo-400">Care.xyz</span>
+                            <span className="text-xl font-bold text-rose-600 dark:text-rose-400">Care.xyz</span>
                         </Link>
                     </div>
                     <div className="flex items-center space-x-4">
-                        <Link href="/" className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">
+                        <Link href="/" className="text-gray-700 dark:text-gray-200 hover:text-rose-600 px-3 py-2 rounded-md text-sm font-medium">
                             Home
                         </Link>
                         {!loading && (
                             <>
                                 {user ? (
                                     <>
-                                        <Link href="/my-bookings" className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">
+                                        <Link href="/my-bookings" className="text-gray-700 dark:text-gray-200 hover:text-rose-600 px-3 py-2 rounded-md text-sm font-medium">
                                             My Bookings
                                         </Link>
                                         <button
@@ -44,10 +44,10 @@ export default function Navbar() {
                                     </>
                                 ) : (
                                     <>
-                                        <Link href="/login" className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">
+                                        <Link href="/login" className="text-gray-700 dark:text-gray-200 hover:text-rose-600 px-3 py-2 rounded-md text-sm font-medium">
                                             Login
                                         </Link>
-                                        <Link href="/register" className="bg-indigo-600 text-white hover:bg-indigo-700 px-4 py-2 rounded-md text-sm font-medium">
+                                        <Link href="/register" className="bg-rose-600 text-white hover:bg-rose-700 px-4 py-2 rounded-md text-sm font-medium">
                                             Sign Up
                                         </Link>
                                     </>
